@@ -6,6 +6,7 @@ use Http;
 
 class OrderApiService
 {
+    // делаем запрос на сторонний апи сервис для бронирования заказа
     public function bookOrder($orderData, $barcode)
     {
         //$response = Http::get("https://api.site.com/book");
@@ -17,6 +18,7 @@ class OrderApiService
         return $response[array_rand($response)];
     }
 
+    //  в случае успешного бронирования заказа делаем запрос на сторонний апи с подтверждением заказа
     public function approveOrder($barcode)
     {
         //$response = Http::get("https://api.site.com/approve");

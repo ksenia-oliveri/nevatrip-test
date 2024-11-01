@@ -14,6 +14,7 @@ class OrderService
         // Вычисление общей стоимости заказа
         $equal_price = ($ticket_adult_price * $ticket_adult_quantity) + ($ticket_kid_price * $ticket_kid_quantity);
 
+        // сохранение заказа в базу
         return Order::create([
             'event_id' => $event_id,
             'event_date' => $event_date,
