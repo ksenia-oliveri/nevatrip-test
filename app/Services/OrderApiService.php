@@ -6,7 +6,7 @@ use Http;
 
 class OrderApiService
 {
-    public function bookOrder($event_id, $event_date, $ticket_adult_price, $ticket_adult_quantity, $ticket_kid_price, $ticket_kid_quantity, $barcode)
+    public function bookOrder($orderData, $barcode)
     {
         //$response = Http::get("https://api.site.com/book");
 
